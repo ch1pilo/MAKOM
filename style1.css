@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primario: #AFAC94;
+    --primarioClaro: #E5E2D3;
+    --blanco: #F4F4F1;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primario);
+}
+
+ul{
+    display: flex;
+    gap: 20PX;
+    list-style: none;
+    color: var(--blanco);
+}
+
+.mostrador{
+    position: relative;
+    height: 500px;
+    background-image: url(img/WhatsApp\ Image\ 2026-03-08\ at\ 9.31.49\ AMf.jpeg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.titulo{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}

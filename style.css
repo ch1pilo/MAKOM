@@ -1,0 +1,310 @@
+/* --- Variables y Configuración General --- */
+:root {
+    --color-fondo: #F7F6F3;
+    --color-texto: #333333;
+    --color-titulos: #1a1a1a;
+    --color-footer: #3E2A1A;
+    --fuente-texto: 'Inter', sans-serif;
+    --fuente-titulos: 'Playfair Display', serif;
+    --radio-borde: 5px; /* Aquí está tu restricción de 5px máximo */
+}
+
+.submenus ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: var(--radio-borde);
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espaciado entre secciones */
+}
+
+/* --- 1. Hero Section --- */
+.hero {
+    height: 50vh;
+    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logo-hero {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-family: var(--fuente-titulos);
+    font-size: 5rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+/* --- 2. Introducción --- */
+.seccion-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    color: var(--color-titulos);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.intro-texto p {
+    color: #555;
+}
+
+/* --- 3. Imagen Destacada --- */
+.seccion-destacada {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radio-borde);
+}
+
+.img-panoramica {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+/* --- 4. Grid de Servicios --- */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-servicio {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-servicio img {
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.tarjeta-servicio h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-servicio a {
+    text-decoration: none;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- 5. Portafolio --- */
+.seccion-portafolio {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.portafolio-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.portafolio-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portafolio-galeria img {
+    height: 300px;
+    object-fit: cover;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* --- 6. Plano --- */
+.seccion-plano {
+    text-align: center;
+}
+
+.contenedor-plano {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radio-borde);
+    margin-bottom: 20px;
+}
+
+.contenedor-plano img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.pie-foto {
+    font-size: 0.9rem;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- 7. Prensa --- */
+.seccion-prensa {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 40px;
+    color: white;
+    text-align: center;
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+}
+
+.prensa-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.titulo-prensa {
+    position: relative;
+    z-index: 10;
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.prensa-grid {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.cita p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.cita span {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+/* --- 8. Footer --- */
+.footer-principal {
+    background-color: var(--color-footer);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 80px 24px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-columna h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-columna h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.linea-corta {
+    width: 30px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+.footer-columna p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.btn-reservar {
+    background-color: white;
+    color: var(--color-footer);
+    border: none;
+    padding: 12px 30px;
+    border-radius: var(--radio-borde);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Responsivo Básico --- */
+@media (max-width: 768px) {
+    .seccion-intro, .seccion-portafolio {
+        grid-template-columns: 1fr;
+    }
+    .logo-hero {
+        font-size: 3rem;
+    }
+}
