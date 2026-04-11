@@ -79,7 +79,6 @@ li a{
 }
 
 .description h1{
-    font-size: 48px;
     margin-bottom: 20px;
     width: 100%;
     font-size: 140px;
@@ -226,12 +225,15 @@ li a{
 
 .galery .fila .rigth2 .f{
     display: flex;
-    gap: 80px;
-    width: 120px;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .celda p{
-    width: 120px;
+    width: auto;
+    flex: 1;
+    min-width: 150px;
 }
 .galery .fila .rigth2 P{
     margin: 0;
@@ -456,4 +458,115 @@ footer {
 footer a {
     color: var(--olive-branch);
     text-decoration: none;
+}
+
+@media (max-width: 1090px) {
+  
+    .galery .fila .rigth2 .f {
+        gap: 10px;
+    }
+    .fila .left, .fila-reverse .right {
+        padding: 40px;
+    }
+    .card {
+        padding: 30px;
+    }
+
+    .manifiesto {
+        padding: 50px 20px;
+    }
+
+    .manifiesto p{
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .card .contenedor{
+        width: 80%;
+    }
+
+    .card .contenedor img {
+        width: 100%;
+        height: auto;
+    }
+
+    .press .fila{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+} 
+
+@media (max-width: 768px) {
+    .galery .fila{
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    
+    
+    .galery .fila .left, .galery .fila .right, .galery .fila .rigth2{
+        width: 100%;
+    }
+
+    .galery .fila .rigth2 .f {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .wellhall .fila {
+        grid-template-columns: 1fr; 
+    }
+
+    .niveles .fila {
+        grid-template-columns: 1fr; 
+    }
+
+    nav{
+        display: none;
+    }
+
+     .wellhall .box {
+        min-height: auto;
+    }
+
+    header .logo {
+        
+    }
+
+
+
+     .baner {
+        height: 400px;
+    }
+
+     .baner::before {
+        filter: blur(5px);
+    }
+
+    .description h1 {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .description h1 {
+        font-size: 60px;
+    }
+
+    .baner {
+        height: 300px;
+    }
+
+    .baner::before {
+        filter: blur(3px);
+    }
+        .fila .left, .fila-reverse .right {
+        padding: 20px;
+    }
 }
