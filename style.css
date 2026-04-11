@@ -1,310 +1,459 @@
-/* --- Variables y Configuración General --- */
-:root {
-    --color-fondo: #F7F6F3;
-    --color-texto: #333333;
-    --color-titulos: #1a1a1a;
-    --color-footer: #3E2A1A;
-    --fuente-texto: 'Inter', sans-serif;
-    --fuente-titulos: 'Playfair Display', serif;
-    --radio-borde: 5px; /* Aquí está tu restricción de 5px máximo */
+:root{
+    --dark-grey: #252525;
+    --oat: #e5e2d3;
+    --olive-branch: #afac94;
+    --marron: #694734;
+    --white-defecto: #ffffff;
+    --black-defecto: #000000;
+    font-family: early-sans;
 }
 
-.submenus ul{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "early-sans-variable",sans-serif;
+    font-variation-settings: 'wght' 300;
 }
 
-body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: var(--fuente-texto);
-    line-height: 1.6;
-}
+body{
+    background-color: var(--oat);
 
-img {
-    max-width: 100%;
-    display: block;
-    border-radius: var(--radio-borde);
 }
-
-.contenedor-principal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 80px; /* Espaciado entre secciones */
-}
-
-/* --- 1. Hero Section --- */
-.hero {
-    height: 50vh;
-    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 60px;
+        background-color: var(--dark-grey);
+
+    padding: 0 30px;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+header img{
+    width: 180px;
 }
 
-.logo-hero {
-    position: relative;
-    z-index: 10;
-    color: white;
-    font-family: var(--fuente-titulos);
-    font-size: 5rem;
-    letter-spacing: 5px;
-    font-weight: 500;
-}
-
-/* --- 2. Introducción --- */
-.seccion-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+ul{
+    list-style: none;
+    display: flex;
     align-items: center;
-}
-
-.intro-texto h2 {
-    font-family: var(--fuente-titulos);
-    font-size: 3rem;
-    color: var(--color-titulos);
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.intro-texto p {
-    color: #555;
-}
-
-/* --- 3. Imagen Destacada --- */
-.seccion-destacada {
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: var(--radio-borde);
-}
-
-.img-panoramica {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-}
-
-/* --- 4. Grid de Servicios --- */
-.grid-servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.tarjeta-servicio {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: var(--radio-borde);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-servicio:hover {
-    transform: translateY(-5px);
-}
-
-.tarjeta-servicio img {
-    height: 250px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.tarjeta-servicio h3 {
-    font-family: var(--fuente-titulos);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.tarjeta-servicio a {
-    text-decoration: none;
-    color: #777;
-    font-size: 0.9rem;
-}
-
-/* --- 5. Portafolio --- */
-.seccion-portafolio {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-}
-
-.portafolio-texto h2 {
-    font-family: var(--fuente-titulos);
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.portafolio-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.portafolio-galeria img {
-    height: 300px;
-    object-fit: cover;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
+li a{
+    text-decoration: none;
+    color: var(--white-defecto);
 }
 
-/* --- 6. Plano --- */
-.seccion-plano {
-    text-align: center;
-}
-
-.contenedor-plano {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: var(--radio-borde);
-    margin-bottom: 20px;
-}
-
-.contenedor-plano img {
+.baner{
     width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-}
-
-.pie-foto {
-    font-size: 0.9rem;
-    color: #777;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* --- 7. Prensa --- */
-.seccion-prensa {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    padding: 100px 40px;
-    color: white;
-    text-align: center;
-    border-radius: var(--radio-borde);
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     overflow: hidden;
 }
 
-.prensa-overlay {
+.baner::before{
+    content: "";
     position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/WhatsApp\ Image\ 2026-03-08\ at\ 9.31.49\ AMf.jpeg);
+    filter: blur(8px);
+    z-index: -1;
+    transform: scale(1.1);
 }
 
-.titulo-prensa {
-    position: relative;
-    z-index: 10;
-    font-family: var(--fuente-titulos);
-    font-size: 3rem;
-    margin-bottom: 50px;
+.description{
+    color: var(--white-defecto);
+    filter: none;
+    text-align: center;
 }
 
-.prensa-grid {
-    position: relative;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-}
-
-.cita p {
-    font-style: italic;
-    margin-bottom: 15px;
-    color: #e0e0e0;
-}
-
-.cita span {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: #aaa;
-}
-
-/* --- 8. Footer --- */
-.footer-principal {
-    background-color: var(--color-footer);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 80px 24px;
-}
-
-.footer-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-}
-
-.footer-columna h2 {
-    font-family: var(--fuente-titulos);
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.footer-columna h4 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.linea-corta {
-    width: 30px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.3);
+.description h1{
+    font-size: 48px;
     margin-bottom: 20px;
+    width: 100%;
+    font-size: 140px;
 }
 
-.footer-columna p {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+.manifiesto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 150px;
+    gap: 80px;
+    border: solid 1px var(--oat);
+    background-color: var(--oat);
+    color: var(--marron);
 }
 
-.btn-reservar {
-    background-color: white;
-    color: var(--color-footer);
+.manifiesto p{
+    width: 800px;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--olive-branch);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--olive-branch);
+    background-color: var(--oat);
+    padding: 50px;
+}
+
+.card .contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    color: var(--marron);
+}
+
+.card .contenedor img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.fila, .fila-reverse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+}
+
+.dist{
+    background-color: var(--olive-branch);
+}
+.fila .left, .fila-reverse .right{
+    display: flex;
+    flex-direction: column;
+    padding: 35px 105px;
+    color: var(--marron);
+    gap: 30px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin: auto;
+}
+
+.fila-reverse .right{
+    text-align: right;
+}
+
+.line-reverse hr{
+    margin-left: 100%
+}
+
+.left .line hr, .line-reverse hr{
     border: none;
-    padding: 12px 30px;
-    border-radius: var(--radio-borde);
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 2px;
+    height: 120px;
+    background-color: var(--marron);
 }
 
-.btn-reservar:hover {
-    background-color: #e0e0e0;
+.right img, .fila-reverse .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* --- Responsivo Básico --- */
-@media (max-width: 768px) {
-    .seccion-intro, .seccion-portafolio {
-        grid-template-columns: 1fr;
-    }
-    .logo-hero {
-        font-size: 3rem;
-    }
+.galery{
+    border-bottom: solid 1px var(--olive-branch);
+    color: var(--marron);
+}
+.galery .fila{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.galery .fila .left{
+    width: 50%;
+    margin: 0;
+}
+
+.galery .fila .left p{
+    margin: 0;
+}
+
+.galery .fila .right{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 600px;
+    height: 40%;
+}
+
+.grande {
+    grid-row: 1 / span 2; 
+    height: 100%;
+}
+
+.grande img, .foto-chica {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.galery h3, .galery p{
+    color: var(--marronk-grey);
+    margin-left: 8%;
+}
+
+.galery .fila .rigth2 .f{
+    display: flex;
+    gap: 80px;
+    width: 120px;
+}
+
+.celda p{
+    width: 120px;
+}
+.galery .fila .rigth2 P{
+    margin: 0;
+    text-align: justify;
+}
+
+.galery .fila .rigth2{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+/* Tira de imágenes tipo mosaico */
+/* Contenedor Principal */
+.mood-board {
+    background-color: var(--oat); /* */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mood-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 600px; /* Altura base para el escritorio */
+}
+
+/* El cuadro verde de fondo en el collage */
+.bg-shape {
+    position: absolute;
+    background-color: #afac9480; /* Tu verde con transparencia */
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    right: 10%;
+    z-index: 1;
+}
+
+/* Estilo base para todas las imágenes del collage */
+.mood-item {
+    position: absolute;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.mood-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Posicionamiento exacto basado en porcentajes */
+.plant { width: 12%; top: 10%; left: 10%; }
+.chair { width: 15%; top: 5%; left: 30%; }
+.sofa { width: 45%; bottom: 5%; left: 5%; }
+.table { width: 30%; top: 30%; left: 45%; }
+.lamp { width: 10%; top: 35%; right: 15%; }
+.coffee-table { width: 10%; bottom: 10%; right: 25%; }
+
+/* Texto elegante "Mood Board" */
+.mood-text {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: right;
+    font-family: serif;
+    z-index: 5;
+}
+
+.mood-text span { font-size: 24px; color: var(--marronk-grey); }
+.mood-text p { font-size: 40px; font-style: italic; color: #5c3d2e; margin-top: -10px; }
+/* Sección Niveles (I, II, III, IV) */
+.niveles {
+    padding: 100px 50px;
+    background-color: var(--olive-branch);
+}
+
+.niveles .fila {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para los niveles */
+    gap: 30px;
+}
+
+.dising {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--marron);
+
+}
+
+.dising img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.dising p {
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.press {
+    background-color: #3d2b1f; /* Un café oscuro como en el diseño */
+    background-image: linear-gradient(rgba(61, 43, 31, 0.7), rgba(61, 43, 31, 0.7)), url("img/WhatsApp\ Image\ 2026-03-08\ at\ 9.31.49\ AMf.jpeg");
+    color: var(--white-defecto);
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.press h3 {
+    margin-bottom: 60px;
+    letter-spacing: 5px;
+}
+
+.press .fila {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.cont p:first-child {
+    font-size: 40px;
+    font-family: serif;
+    color: var(--olive-branch);
+}
+
+.cont p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Sección The Wellhall */
+/* Sección Principal */
+.wellhall {
+    background-color: #5c3d2e; /* El color marrón de la imagen */
+    color: var(--white-defecto);
+    padding: 100px 50px;
+    text-align: left; /* Título alineado a la izquierda según la imagen */
+}
+
+.wellhall h3 {
+    font-size: 50px;
+    font-family: serif; /* Ajustar a tu fuente elegante */
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+/* Forzamos 3 columnas para esta fila específica */
+.wellhall .fila {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+/* Estilo de los cuadros */
+.wellhall .box {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 350px;
+    justify-content: flex-start;
+}
+
+.wellhall .box h4 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Botón estilo "Pill" del centro */
+.btn-pill {
+    margin-top: auto; /* Lo empuja hacia abajo */
+    border: 1px solid white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-pill:hover {
+    background-color: white;
+    color: #5c3d2e;
+}
+
+/* Imagen de Cartografía */
+.map-img {
+    width: 100%;
+    filter: invert(1); /* Si tu imagen es negra, esto la hace blanca */
+    margin-top: 10px;
+}
+
+/* Footer Final */
+footer {
+    background-color: var(--dark-grey);
+    color: var(--white-defecto);
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+footer a {
+    color: var(--olive-branch);
+    text-decoration: none;
 }
