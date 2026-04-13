@@ -5,18 +5,22 @@
     --marron: #694734;
     --white-defecto: #ffffff;
     --black-defecto: #000000;
-    font-family: early-sans;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "early-sans-variable",sans-serif;
-    font-variation-settings: 'wght' 300;
 }
 
+html { scroll-behavior: smooth; }
+
+
 body{
+    font-family: var(--font-display);
+
     background-color: var(--oat);
 
 }
@@ -48,10 +52,7 @@ li a{
 
 .baner{
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 600px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,23 +60,41 @@ li a{
     overflow: hidden;
 }
 
+.description {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(38,18,10,.35) 15%,
+    rgba(30,18,10,.15) 65%,
+    rgba(30,18,10,.45) 110%
+  );
+}
+
 .baner::before{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/WhatsApp\ Image\ 2026-03-08\ at\ 9.31.49\ AMf.jpeg);
-    filter: blur(8px);
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-image: url("img/19.PNG");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur();
     z-index: -1;
-    transform: scale(1.1);
+    transform: scale(0.98);
 }
 
 .description{
     color: var(--white-defecto);
     filter: none;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .description h1{
@@ -257,7 +276,7 @@ li a{
     justify-content: center;
 }
 
-.mood-container {
+.mood-container, .mood-container2 {
     position: relative;
     width: 90%;
     max-width: 1200px;
@@ -286,7 +305,6 @@ li a{
     transform: scale(1.05);
     z-index: 10;
 }
-
 /* Posicionamiento exacto basado en porcentajes */
 .plant { width: 12%; top: 10%; left: 10%; }
 .chair { width: 15%; top: 5%; left: 30%; }
@@ -294,6 +312,24 @@ li a{
 .table { width: 30%; top: 30%; left: 45%; }
 .lamp { width: 10%; top: 35%; right: 15%; }
 .coffee-table { width: 10%; bottom: 10%; right: 25%; }
+
+
+.mood-container2 .plant { width: 20%; top: 10%; left: 10%; }
+.mood-container2 .chair { width: 15%; top: 5%; left: 30%; }
+.mood-container2 .sofa { width: 45%; bottom: 5%; left: 5%; }
+.mood-container2 .table {
+    width: 15%;
+    height: 40%;
+    top: 10%;
+    left: 75%;
+}
+.mood-container2 .lamp { width: 10%; top: 35%; right: 7%; }
+.mood-container2 .coffee-table {
+    width: 22%;
+    bottom: 10%;
+    right: 25%;
+    z-index: 1;
+}
 
 /* Texto elegante "Mood Board" */
 .mood-text {
@@ -460,6 +496,17 @@ footer a {
     text-decoration: none;
 }
 
+.redes{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.redes i{
+    text-align: center;
+    font-size: 50px;
+    color: var(--white-defecto);
+    transition: color 0.3s ease;
+}
 @media (max-width: 1090px) {
   
     .galery .fila .rigth2 .f {
