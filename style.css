@@ -29,7 +29,7 @@ header{
     align-items: center;
     justify-content: space-between;
     height: 60px;
-        background-color: var(--dark-grey);
+    background-color: var(--dark-grey);
 
     padding: 0 30px;
 }
@@ -45,10 +45,18 @@ ul{
     gap: 20px;
 }
 
+a{
+    color: var(--marronk-grey);
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
 li a{
     text-decoration: none;
     color: var(--white-defecto);
 }
+
+
 
 .baner{
     width: 100%;
@@ -306,13 +314,62 @@ li a{
     z-index: 10;
 }
 /* Posicionamiento exacto basado en porcentajes */
-.plant { width: 12%; top: 10%; left: 10%; }
-.chair { width: 15%; top: 5%; left: 30%; }
-.sofa { width: 45%; bottom: 5%; left: 5%; }
-.table { width: 30%; top: 30%; left: 45%; }
-.lamp { width: 10%; top: 35%; right: 15%; }
-.coffee-table { width: 10%; bottom: 10%; right: 25%; }
+/* Lámpara colgante izquierda (Chandelier) */
+/* Lámpara colgante grande (Izquierda) */
+.table {
+    width: 34%;
+    top: -15%;
+    /* left: 8%; */
+    right: 10%;
+    z-index: 2;
+}
 
+/* Patrón de hojas (Arriba al centro) */
+.plant {
+    width: 30%;
+    top: 7%;
+    left: 15%;
+    z-index: 1;
+}
+
+/* Aparador oscuro / Credenza (Arriba a la derecha) */
+.coffee-table {
+    width: 28%;
+    top: 50%;
+    left: 44%;
+    z-index: 2;
+}
+
+/* Lámpara de pared pequeña (Esquina superior derecha) */
+.lamp {
+    width: 9%;
+    top: 30%;
+    right: 4%;
+    z-index: 2;
+}
+
+/* Mesa larga de madera (Abajo a la izquierda) */
+.sofa {
+    width: 42%;
+    bottom: 1%;
+    z-index: 2;
+}
+
+/* Silla (Abajo al centro) */
+.chair {
+    width: 12%;
+    bottom: 50%;
+    left: 46%;
+    z-index: 3;
+}
+
+/* Cuadro amarillo (Abajo a la derecha) */
+.retrato {
+    width: 30%;
+    bottom: 2%;
+    right: 8%;
+    z-index: 2;
+}
 
 .mood-container2 .plant { width: 20%; top: 10%; left: 10%; }
 .mood-container2 .chair { width: 15%; top: 5%; left: 30%; }
@@ -379,7 +436,9 @@ li a{
 
 .press {
     background-color: #3d2b1f; /* Un café oscuro como en el diseño */
-    background-image: linear-gradient(rgba(61, 43, 31, 0.7), rgba(61, 43, 31, 0.7)), url("img/WhatsApp\ Image\ 2026-03-08\ at\ 9.31.49\ AMf.jpeg");
+    background-image: linear-gradient(rgba(61, 43, 31, 0.7), rgba(61, 43, 31, 0.7));
+    background-size: cover;
+    background-position: center;
     color: var(--white-defecto);
     padding: 100px 10%;
     text-align: center;
