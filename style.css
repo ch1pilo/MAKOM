@@ -881,7 +881,23 @@ footer a {
     }
 
     .fila, .fila-reverse {
-        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Forzamos que el texto siempre aparezca arriba de la imagen en móvil */
+    .fila-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .fila .left, .fila-reverse .right {
+        text-align: center;
+        padding: 60px 20px;
+        width: 100%;
+    }
+
+    .left .line hr, .line-reverse hr {
+        margin: 20px auto; /* Centra las líneas verticales */
     }
 
     .galery .fila{
