@@ -823,6 +823,12 @@ footer a {
     .galery .fila .right {
     height: 400px;
 }
+    .card .contenedor {
+        padding: 0;
+    }
+    .card {
+        padding: 25px;
+    }
  
 }
 
