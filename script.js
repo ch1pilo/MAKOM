@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Lista de imágenes disponibles en tu carpeta img
     // Puedes agregar o quitar nombres de archivos según lo que tengas en tu carpeta
     const misImagenes = [
-        "img/20.WEBP", "img/17.WEBP", "img/18.WEBP", "img/19.WEBP", "img/23.WEBP", "img/23.WEBP", "img/24 (2).WEBP", "img/24.WEBP", "img/25.WEBP", "img/26.WEBP", "img/27.WEBP", "img/28.WEBP", "img/29.WEBP", "img/30.WEBP", "img/31.WEBP", "img/32.WEBP", "img/33.WEBP", "img/34.WEBP", "img/35.WEBP", "img/36.WEBP", "img/37.WEBP", "img/38.WEBP", "img/39.WEBP", "img/40.WEBP", "img/41.WEBP", "img/42.WEBP", "img/43.WEBP", "img/44.WEBP"
+        "img/20.WEBP", "img/17.webp", "img/18.webp", "img/19.webp", "img/23.webp", "img/23.webp", "img/24 (2).webp", "img/24.webp", "img/25.webp", "img/26.webp", "img/27.webp", "img/28.webp", "img/29.webp", "img/30.webp", "img/31.webp", "img/32.webp", "img/33.webp", "img/34.webp", "img/35.webp", "img/36.webp", "img/37.webp", "img/38.webp", "img/39.webp", "img/40.webp", "img/41.webp", "img/42.webp", "img/43.webp", "img/44.webp"
     ];
 
     /**
