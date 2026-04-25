@@ -86,7 +86,7 @@ li a{
     left: -10px;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
-    background-image: url("img/19.PNG");
+    background-image: url("img/19.WEBP");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -129,9 +129,8 @@ li a{
 }
 
 .cards{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border: solid 1px var(--olive-branch);
 }
 
@@ -163,12 +162,17 @@ li a{
 .fila, .fila-reverse{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    flex: 1;
 }
 
 .dist{
     background-color: var(--olive-branch);
 }
+
+.dist .fila > div,
+.dist .fila-reverse > div {
+    aspect-ratio: 1 / 1;
+}
+
 .fila .left, .fila-reverse .right{
     display: flex;
     flex-direction: column;
@@ -180,6 +184,7 @@ li a{
     margin-bottom: 0;
     margin-right: 0;
     margin: auto;
+    justify-content: center;
 }
 
 .fila-reverse .right{
@@ -212,7 +217,7 @@ li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 120px 50px;
 }
 
 .galery .fila .left{
@@ -230,7 +235,7 @@ li a{
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     width: 600px;
-    height: 40%;
+    height: 600px;
 }
 
 .grande {
@@ -243,7 +248,20 @@ li a{
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
+
+/* Animación de "Parpadeo" para la transición de imágenes */
+@keyframes blinkEffect {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    45% { opacity: 1; }
+    50% { opacity: 0; transform: scale(0.95); }
+    55% { opacity: 1; }
+}
+
+ .animate-8s { animation: blinkEffect 8s infinite; }
+ .animate-10s { animation: blinkEffect 10s infinite; }
+ .animate-12s { animation: blinkEffect 12s infinite; }
 
 .galery h3, .galery p{
     color: var(--marronk-grey);
@@ -318,74 +336,96 @@ li a{
 /* Lámpara colgante grande (Izquierda) */
 .table {
     width: 34%;
-    top: -15%;
-    /* left: 8%; */
-    right: 10%;
+    top: 15%;   
+    right: 1%;
     z-index: 2;
 }
 
 /* Patrón de hojas (Arriba al centro) */
-.plant {
-    width: 30%;
-    top: 7%;
-    left: 15%;
+.mood-container .plant {
+    width: 40%;
+    bottom: 40%;
     z-index: 1;
+    left: 4%;
 }
 
 /* Aparador oscuro / Credenza (Arriba a la derecha) */
-.coffee-table {
+.mood-container .coffee-table {
     width: 28%;
     top: 50%;
     left: 44%;
-    z-index: 2;
 }
 
 /* Lámpara de pared pequeña (Esquina superior derecha) */
-.lamp {
+.mood-container .lamp {
     width: 9%;
-    top: 30%;
-    right: 4%;
+    bottom: 83%;
+    right: 1%;
     z-index: 2;
 }
 
 /* Mesa larga de madera (Abajo a la izquierda) */
-.sofa {
+.mood-container .sofa {
     width: 42%;
     bottom: 1%;
     z-index: 2;
 }
 
 /* Silla (Abajo al centro) */
-.chair {
-    width: 12%;
+.mood-container .chair {
+    width: 18%;
+    height: 90px;
+    bottom: 90%;
+    left: 36%;
+    z-index: 3;
+}
+/* Cuadro amarillo (Abajo a la derecha) */
+.mood-container .retrato {
+    width: 30%;
     bottom: 50%;
-    left: 46%;
+    right: 18%;
     z-index: 3;
 }
 
-/* Cuadro amarillo (Abajo a la derecha) */
-.retrato {
-    width: 30%;
-    bottom: 2%;
-    right: 8%;
-    z-index: 2;
+.mood-container2 .plant {
+    width: 20%;
+    top: 10%;
 }
 
-.mood-container2 .plant { width: 20%; top: 10%; left: 10%; }
+.mood-container2 .sillaLapiz {
+    width: 18%;
+    left: 40%;
+    top: 15%;
+    z-index: 3;
+}
 .mood-container2 .chair { width: 15%; top: 5%; left: 30%; }
-.mood-container2 .sofa { width: 45%; bottom: 5%; left: 5%; }
+.mood-container2 .sofa {
+    width: 45%;
+    top: 45%;
+    left: 15%;
+}
 .mood-container2 .table {
     width: 15%;
-    height: 40%;
-    top: 10%;
-    left: 75%;
+    height: 30%;
+     top: 10%;
+    left: 65%;
 }
-.mood-container2 .lamp { width: 10%; top: 35%; right: 7%; }
+.mood-container2 .lamp {
+    width: 20%;
+    top: 10%;
+    height: 35%;
+    left: 85%;
+}
 .mood-container2 .coffee-table {
     width: 22%;
     bottom: 10%;
-    right: 25%;
-    z-index: 1;
+    right: 5%;
+}
+
+.mood-container2 .sillaInverso {
+    left: 45%;
+    top: 50%;
+    width: 20%;
 }
 
 /* Texto elegante "Mood Board" */
@@ -423,8 +463,15 @@ li a{
 
 .dising img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
+}
+
+#papel img, #manillas img {
+    height: 420px;
+}
+#ceramica img {
+    height: 350px;
 }
 
 .dising p {
@@ -432,27 +479,6 @@ li a{
     letter-spacing: 2px;
     line-height: 1.8;
     text-transform: uppercase;
-}
-
-.press {
-    background-color: #3d2b1f; /* Un café oscuro como en el diseño */
-    background-image: linear-gradient(rgba(61, 43, 31, 0.7), rgba(61, 43, 31, 0.7));
-    background-size: cover;
-    background-position: center;
-    color: var(--white-defecto);
-    padding: 100px 10%;
-    text-align: center;
-}
-
-.press h3 {
-    margin-bottom: 60px;
-    letter-spacing: 5px;
-}
-
-.press .fila {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
 }
 
 .cont {
@@ -517,6 +543,8 @@ li a{
 
 /* Botón estilo "Pill" del centro */
 .btn-pill {
+        background-color: var(--marron);
+
     margin-top: auto; /* Lo empuja hacia abajo */
     border: 1px solid white;
     padding: 15px 30px;
@@ -528,14 +556,87 @@ li a{
 }
 
 .btn-pill:hover {
-    background-color: white;
-    color: #5c3d2e;
+    border-color: var(--oat);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
+/* Estilos para Modales */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #5c3d2e;
+    padding: 40px;
+    border: 1px solid var(--olive-branch);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--olive-branch);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.modal-form input, 
+.modal-form select, 
+.modal-form textarea {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-family: var(--font-body);
+    outline: none;
+}
+
+.modal-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.modal-form select option {
+    background-color: #5c3d2e;
+}
+
+.wellhall .box .btn-pill {
+    cursor: pointer;
+    background: transparent;
+    font-family: var(--font-body);
+    width: fit-content;
+    align-self: flex-start;
+}
+.press{
+    background-color: #623d2a;
+    padding: 100px 100px;
+
+}
 /* Imagen de Cartografía */
 .map-img {
     width: 100%;
-    filter: invert(1); /* Si tu imagen es negra, esto la hace blanca */
     margin-top: 10px;
 }
 
@@ -572,10 +673,20 @@ footer a {
         gap: 10px;
     }
     .fila .left, .fila-reverse .right {
-        padding: 40px;
+        padding: 30px; /* Reducción de espacio para que el texto quepa en el cuadrado */
+        gap: 15px;
     }
-    .card {
-        padding: 30px;
+
+    .fila h3, .fila-reverse h3 {
+        font-size: 1.8rem;
+    }
+
+    .fila p, .fila-reverse p {
+        font-size: 0.9rem;
+    }
+
+    .left .line hr, .line-reverse hr {
+        height: 80px; /* Acortamos la línea decorativa */
     }
 
     .manifiesto {
@@ -587,7 +698,7 @@ footer a {
     }
 
     .cards {
-        flex-direction: column;
+        grid-template-columns: auto;
     }
 
     .card{
@@ -595,6 +706,7 @@ footer a {
     }
     .card .contenedor{
         width: 80%;
+        padding: 30px;
     }
 
     .card .contenedor img {
@@ -606,15 +718,170 @@ footer a {
         grid-template-columns: 1fr;
         text-align: center;
     }
-} 
+    .mood-board {
+        padding: 50px 0;
+    }
+
+    .table {
+        width: 34%;
+        top: 15%;   
+        right: 1%;
+        z-index: 2;
+    }
+
+    /* Patrón de hojas (Arriba al centro) */
+    .mood-container .plant {
+        width: 40%;
+        bottom: 40%;
+        z-index: 1;
+        left: 4%;
+    }
+
+    /* Aparador oscuro / Credenza (Arriba a la derecha) */
+    .mood-container .coffee-table {
+        width: 28%;
+        top: 50%;
+        left: 44%;
+    }
+
+    /* Lámpara de pared pequeña (Esquina superior derecha) */
+    .mood-container .lamp {
+        width: 9%;
+        bottom: 83%;
+        right: 1%;
+        z-index: 2;
+    }
+
+    /* Mesa larga de madera (Abajo a la izquierda) */
+    .mood-container .sofa {
+        width: 42%;
+        bottom: 1%;
+        z-index: 2;
+    }
+
+    /* Silla (Abajo al centro) */
+    .mood-container .chair {
+        width: 18%;
+        height: 90px;
+        bottom: 80%;
+        left: 36%;
+        z-index: 3;
+    }
+    /* Cuadro amarillo (Abajo a la derecha) */
+    .mood-container .retrato {
+        width: 30%;
+        bottom: 50%;
+        right: 18%;
+        z-index: 3;
+    }
+
+    .mood-container2 .plant {
+        width: 20%;
+        top: 10%;
+    }
+
+    .mood-container2 .sillaLapiz {
+        width: 18%;
+        left: 40%;
+        top: 15%;
+        z-index: 3;
+    }
+    .mood-container2 .chair { width: 15%; top: 5%; left: 30%; }
+    .mood-container2 .sofa {
+        width: 45%;
+        top: 45%;
+        left: 15%;
+    }
+    .mood-container2 .table {
+        width: 15%;
+        height: 30%;
+        top: 10%;
+        left: 65%;
+    }
+    .mood-container2 .lamp {
+        width: 20%;
+        top: 10%;
+        height: 35%;
+        left: 85%;
+    }
+    .mood-container2 .coffee-table {
+        width: 22%;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .mood-container2 .sillaInverso {
+        left: 45%;
+        top: 50%;
+        width: 20%;
+    }
+
+    .press {
+        padding: 10px;
+    }
+
+    .galery .fila .right {
+    height: 400px;
+}
+ 
+}
 
 @media (max-width: 768px) {
+    /* Ajuste de posiciones para los Mood Boards en móvil */
+    .mood-container, .mood-container2 {
+        height: 500px;
+        width: 100%;
+    }
+
+    .bg-shape {
+        width: 70%;
+        height: 50%;
+        top: 25%;
+    }
+
+    /* Mood Container 1 */
+    .mood-container .plant { width: 50%; left: -5%; bottom: 30%; }
+    .mood-container .chair { width: 30%; left: 35%; top: 5%; height: auto; }
+    .mood-container .sofa { width: 60%; bottom: 5%; left: 5%; }
+    .mood-container .table { width: 50%; top: 15%; right: 0; }
+    .mood-container .retrato { width: 40%; top: 45%; right: 5%; }
+    .mood-container .lamp { width: 15%; top: 5%; right: 5%; }
+    .mood-container .coffee-table { width: 40%; top: 50%; left: 30%; }
+
+    /* Mood Container 2 */
+    .mood-container2 .plant { width: 30%; top: 5%; left: 0; }
+    .mood-container2 .chair { width: 25%; top: 2%; left: 25%; }
+    .mood-container2 .sillaLapiz { width: 28%; left: 30%; top: 15%; }
+    .mood-container2 .sillaInverso { width: 35%; left: 45%; top: 40%; }
+    .mood-container2 .sofa { width: 60%; top: 45%; left: 0%; }
+    .mood-container2 .table { width: 25%; top: 5%; left: 55%; height: auto; }
+    .mood-container2 .lamp { width: 20%; top: 2%; left: 75%; height: auto; }
+    .mood-container2 .coffee-table { width: 35%; bottom: 10%; right: 5%; }
+
+    .mood-text {
+        bottom: 2%;
+        right: 5%;
+    }
+
+    .mood-text p {
+        font-size: 30px;
+    }
+
+    /* En móviles quitamos el aspect-ratio para que el contenido defina la altura y no se desborde */
+    .dist .fila > div,
+    .dist .fila-reverse > div {
+        aspect-ratio: auto;
+        min-height: 350px;
+    }
+
+    .fila, .fila-reverse {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+
     .galery .fila{
         flex-direction: column; 
         align-items: center;
     }
-
-    
     
     .galery .fila .left, .galery .fila .right, .galery .fila .rigth2{
         width: 100%;
