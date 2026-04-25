@@ -846,14 +846,17 @@ footer a {
     }
 
     /* Mood Container 1 */
-    .mood-container .plant { width: 50%; left: -5%; bottom: 30%; }
+    .mood-container .plant { width: 50%; left: -5%;  }
     .mood-container .chair { width: 30%; left: 35%; top: 5%; height: auto; }
     .mood-container .sofa { width: 60%; bottom: 5%; left: 5%; }
     .mood-container .table { width: 50%; top: 15%; right: 0; }
     .mood-container .retrato { width: 40%; top: 45%; right: 5%; }
     .mood-container .lamp { width: 15%; top: 5%; right: 5%; }
-    .mood-container .coffee-table { width: 40%; top: 50%; left: 30%; }
-
+    .mood-container .coffee-table {
+        width: 40%;
+        top: 35%;
+        left: 20%;
+    }
     /* Mood Container 2 */
     .mood-container2 .plant { width: 30%; top: 5%; left: 0; }
     .mood-container2 .chair { width: 25%; top: 2%; left: 25%; }
@@ -934,10 +937,7 @@ footer a {
         min-height: auto;
     }
 
-
-
-
-     .baner {
+    .baner {
         height: 400px;
     }
 
@@ -948,6 +948,11 @@ footer a {
     .description h1 {
         font-size: 100px;
     }
+
+    .dising img {
+        height: 300px !important;
+    }
+
 }
 
 @media (max-width: 500px) {
