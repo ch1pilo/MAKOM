@@ -885,6 +885,10 @@ footer a {
         flex-direction: column;
     }
 
+    footer{
+        padding: 10px  20px;
+    }
+
     /* Forzamos que el texto siempre aparezca arriba de la imagen en móvil */
     .fila-reverse {
         flex-direction: column-reverse;
