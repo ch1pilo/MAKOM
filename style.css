@@ -6,7 +6,10 @@
     --white-defecto: #ffffff;
     --black-defecto: #000000;
     --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'Jost', sans-serif;
+    --font-body:    'Jost', sans-serif;
+    --font-parrafo: 'Playfair Display', Georgia, serif;
+    --font-subVariable:   "Playfair Display", serif;
+    --font-subtitulos: "Quicksand", sans-serif;
 }
 
 *{
@@ -24,6 +27,7 @@ body{
     background-color: var(--oat);
 
 }
+
 header{
     display: flex;
     align-items: center;
@@ -49,13 +53,14 @@ a{
     color: var(--marronk-grey);
     letter-spacing: 1px;
     transition: color 0.3s ease;
+    font-family: var(--font-subtitulos);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 li a{
-    text-decoration: none;
     color: var(--white-defecto);
 }
-
 
 
 .baner{
@@ -123,6 +128,14 @@ li a{
     color: var(--marron);
 }
 
+#port{
+    font-size: 50px;
+}
+
+.manifiesto h3, #kavana,.wellhall h4{
+    font-family: var(--font-subtitulos);
+}
+
 .manifiesto p{
     width: 800px;
     text-align: center;
@@ -157,6 +170,11 @@ li a{
     width: 200px;
     height: 250px;
     object-fit: cover;
+}
+
+.card h4{
+    font-family: var(--font-subVariable);
+    font-weight: 100;
 }
 
 .fila, .fila-reverse{
@@ -263,6 +281,13 @@ li a{
  .animate-10s { animation: blinkEffect 10s infinite; }
  .animate-12s { animation: blinkEffect 12s infinite; }
 
+.galery p{
+    font-family: var(--font-parrafo);
+}
+
+.galery h3{
+    font-size: 30px;
+}
 .galery h3, .galery p{
     color: var(--marronk-grey);
     margin-left: 8%;
@@ -438,8 +463,18 @@ li a{
     z-index: 5;
 }
 
-.mood-text span { font-size: 24px; color: var(--marronk-grey); }
-.mood-text p { font-size: 40px; font-style: italic; color: #5c3d2e; margin-top: -10px; }
+.mood-text span { 
+    font-size: 24px; 
+    color: var(--marronk-grey); 
+}
+
+.mood-text p { 
+    font-family: var(--font-parrafo);
+    font-size: 40px; 
+    font-style: italic; 
+    color: #5c3d2e; 
+    margin-top: -10px; 
+}
 /* Sección Niveles (I, II, III, IV) */
 .niveles {
     padding: 100px 50px;
@@ -476,6 +511,7 @@ li a{
 
 .dising p {
     font-size: 13px;
+    font-family: var(--font-parrafo);
     letter-spacing: 2px;
     line-height: 1.8;
     text-transform: uppercase;
@@ -496,6 +532,7 @@ li a{
 
 .cont p {
     font-size: 15px;
+    font-family: var(--font-parrafo);
     line-height: 1.6;
     text-align: left;
 }
@@ -503,8 +540,8 @@ li a{
 /* Sección The Wellhall */
 /* Sección Principal */
 .wellhall {
-    background-color: #5c3d2e; /* El color marrón de la imagen */
-    color: var(--white-defecto);
+    background-color: var(--oat); /* El color marrón de la imagen */
+    color: var(--marron);
     padding: 100px 50px;
     text-align: left; /* Título alineado a la izquierda según la imagen */
 }
@@ -525,7 +562,7 @@ li a{
 
 /* Estilo de los cuadros */
 .wellhall .box {
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--marron);
     padding: 50px 30px;
     display: flex;
     flex-direction: column;
@@ -546,18 +583,18 @@ li a{
         background-color: var(--marron);
 
     margin-top: auto; /* Lo empuja hacia abajo */
-    border: 1px solid white;
+    border: 1px solid var(--marron);
     padding: 15px 30px;
     border-radius: 50px;
-    color: white;
+    color: var(--marron);
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
 }
 
 .btn-pill:hover {
-    border-color: var(--oat);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border-color: var(--marron);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para Modales */
@@ -664,7 +701,7 @@ footer a {
 .redes i{
     text-align: center;
     font-size: 50px;
-    color: var(--white-defecto);
+    color: var(--marron);
     transition: color 0.3s ease;
 }
 @media (max-width: 1090px) {
