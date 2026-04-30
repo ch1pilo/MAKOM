@@ -132,7 +132,7 @@ li a{
     font-size: 50px;
 }
 
-.manifiesto h3, #kavana,.wellhall h4{
+.manifiesto h3, .dist .fila .left h3, .wellhall h4, .description p{
     font-family: var(--font-subtitulos);
 }
 
@@ -414,41 +414,48 @@ li a{
 
 .mood-container2 .plant {
     width: 20%;
-    top: 10%;
+    top: 30%;
+    left: 85%;
 }
 
 .mood-container2 .sillaLapiz {
-    width: 18%;
+    width: 25%;
     left: 40%;
-    top: 15%;
     z-index: 3;
 }
-.mood-container2 .chair { width: 15%; top: 5%; left: 30%; }
+
+.mood-container2 .chair {
+    width: 40%;
+    top: 5%;
+    left: 20%;
+}
+
 .mood-container2 .sofa {
     width: 45%;
     top: 45%;
-    left: 15%;
+    left: 25%;
 }
+
 .mood-container2 .table {
     width: 15%;
-    height: 30%;
-     top: 10%;
-    left: 65%;
+    /* height: 30%; */
+    top: 50%;
+    right: 90%;
 }
+
 .mood-container2 .lamp {
     width: 20%;
     top: 10%;
     height: 35%;
-    left: 85%;
+    left: 75%;
 }
+
 .mood-container2 .coffee-table {
-    width: 22%;
-    bottom: 10%;
-    right: 5%;
+        width: 22%;
 }
 
 .mood-container2 .sillaInverso {
-    left: 45%;
+    left: 50%;
     top: 50%;
     width: 20%;
 }
