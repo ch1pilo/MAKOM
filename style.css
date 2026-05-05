@@ -1,7 +1,8 @@
 :root{
     --dark-grey: #252525;
     --oat: #e5e2d3;
-    --olive-branch: #afac94;
+    --olive-branch: #dcd8cc;
+    --marron-linea : #785a47;
     --marron: #694734;
     --white-defecto: #ffffff;
     --black-defecto: #000000;
@@ -10,6 +11,13 @@
     --font-parrafo: 'Playfair Display', Georgia, serif;
     --font-subVariable:   "Playfair Display", serif;
     --font-subtitulos: "Quicksand", sans-serif;
+}
+
+@font-face {
+    font-family: 'boungiorno-rastellino';
+    src: url(/fonts/Buongiorno\ Rastellino.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 *{
@@ -132,19 +140,24 @@ li a{
     font-size: 50px;
 }
 
+.manifiesto h3{
+    font-size: 15px;
+}
+
 .manifiesto h3, .dist .fila .left h3, .wellhall h4, .description p{
     font-family: var(--font-subtitulos);
 }
 
 .manifiesto p{
-    width: 800px;
+    width: 900px;
+    font-size: 23px;
     text-align: center;
 }
 
 .cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border: solid 1px var(--olive-branch);
+    border: solid 1px var(--marron-linea);
 }
 
 .card{
@@ -152,7 +165,7 @@ li a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid 1px var(--olive-branch);
+    border: solid 1px var(--marron-linea);
     background-color: var(--oat);
     padding: 50px;
 }
@@ -175,6 +188,7 @@ li a{
 .card h4{
     font-family: var(--font-subVariable);
     font-weight: 100;
+    letter-spacing: 3px;
 }
 
 .fila, .fila-reverse{
@@ -194,7 +208,7 @@ li a{
 .fila .left, .fila-reverse .right{
     display: flex;
     flex-direction: column;
-    padding: 35px 105px;
+    padding: 0 165px;
     color: var(--marron);
     gap: 30px;
     margin-top: 0;
@@ -216,7 +230,7 @@ li a{
 .left .line hr, .line-reverse hr{
     border: none;
     width: 2px;
-    height: 120px;
+    height: 190px;
     background-color: var(--marron);
 }
 
@@ -243,8 +257,14 @@ li a{
     margin: 0;
 }
 
+
 .galery .fila .left p{
     margin: 0;
+    padding: 0;
+}
+
+.dist .fila .left p, .dist .fila-reverse .right p{
+    font-size: 20px;
 }
 
 .galery .fila .right{
@@ -300,6 +320,12 @@ li a{
     flex-wrap: wrap;
 }
 
+.galery .fila .rigth2 .c{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .celda p{
     width: auto;
     flex: 1;
@@ -325,6 +351,10 @@ li a{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.plano{
+    padding: 50px !important;
 }
 
 .mood-container, .mood-container2 {
@@ -463,24 +493,26 @@ li a{
 /* Texto elegante "Mood Board" */
 .mood-text {
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    top: 83%;
+    right: 10%;
     text-align: right;
     font-family: serif;
     z-index: 5;
 }
 
 .mood-text span { 
-    font-size: 24px; 
-    color: var(--marronk-grey); 
+    font-size: 30px; 
+    color: var(--marron); 
 }
 
 .mood-text p { 
-    font-family: var(--font-parrafo);
-    font-size: 40px; 
+    font-family: 'boungiorno-rastellino', serif;
+    font-size: 180px; 
     font-style: italic; 
     color: #5c3d2e; 
-    margin-top: -10px; 
+    margin-top: -70px; 
+    margin-right: -120px;
+
 }
 /* Sección Niveles (I, II, III, IV) */
 .niveles {
@@ -522,6 +554,7 @@ li a{
     letter-spacing: 2px;
     line-height: 1.8;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .cont {
@@ -579,7 +612,7 @@ li a{
 }
 
 .wellhall .box h4 {
-    font-size: 22px;
+    font-size: 25px;
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-weight: 400;
@@ -597,6 +630,8 @@ li a{
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
+        letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .btn-pill:hover {
