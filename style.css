@@ -709,6 +709,22 @@ li a{
     background-color: #5c3d2e;
 }
 
+.modal-form button {
+    color: var(--oat);
+    border: solid var(--oat);
+}
+
+.modal-form button:hover {
+    border: solid var(--oat);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.modal-form label {
+    text-align: left;
+    font-size: 14px;
+    color: var(--olive-branch);
+}
+
 .wellhall .box .btn-pill {
     cursor: pointer;
     background: transparent;
