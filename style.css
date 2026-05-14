@@ -665,12 +665,15 @@ li a{
 .modal-content {
     background-color: #5c3d2e;
     padding: 40px;
+    font-family: var(--font-subVariable);
     border: 1px solid var(--olive-branch);
     width: 90%;
     max-width: 500px;
     position: relative;
     color: white;
     text-align: center;
+    max-height: 90%;
+    overflow-y: auto;
 }
 
 .close-btn {
@@ -741,6 +744,12 @@ li a{
 .map-img {
     width: 100%;
     margin-top: 10px;
+}
+
+#Cartografia h3{
+    position: absolute;
+    font-size: 80px;
+    color: var(--olive-branch);
 }
 
 /* Footer Final */

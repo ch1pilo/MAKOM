@@ -209,6 +209,7 @@
             </div>
         </section>
         <section class="press" id="Cartografia">
+            <h3>Cartografía</h3>
             <img src="img/cartografia.webp" alt="Mapa" class="map-img">
         </section>
         <section class="wellhall" id="contactanos">
@@ -217,14 +218,11 @@
                 <div class="box">
                     <h4>Trabajemos juntos</h4>
                     <div class="inf">
-                        <p>123 Anywhere St., <br> Any City ST 12345</p>
+                        <p>
+                            Llena este formulario para concretar tu cita
+                        </p>
                     </div>
-                    <div class="tlf">
-                        <p>1123-456-7890</p>
-                    </div>
-                    <div class="email">
-                        <p>hello@reallygreatsite.com</p>
-                    </div>
+                  
                     <button id="open-info" class="btn-pill"> Más información </button>
                 </div>
 
@@ -260,19 +258,14 @@
                     <input type="email" id="correo" placeholder="Tu Correo electrónico" required>
                     <label for="presupuesto">Presupuesto del proyecto (opcional)</label>
                     <input type="text" id="presupuesto" placeholder="500$ de presupuesto aproximado para el proyecto?" >
-                    <label for="servicio">Selecciona una opción</label>
-                    <select id="servicio" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="arquitectura">Que espacio estás interesado en diseñar?</option>
-                        <option value="interiores">Cuál seía su función? Ej. relajante, trabajo, área social o entrenamiento</option>
-                        <option value="mobiliario">Te gusta algún estilo en especifico? Ej, contemporaneo, clasico, minimalista...</option>
-                        <option value="mobiliario">Que piezas de mobiliario desearías conservar?</option>
-                        <option value="mobiliario">Tienes preferencias por algunos materiales? Ej, mármol, madera, tela</option>
-                        <option value="mobiliario">Tienes una fecha para la finalización del proyecto?</option>
-                        <option value="mobiliario">Tienes alguna necesidad específica de accesibilidad, niños u mascotas?</option>
-                        <option value="mobiliario">Tienes arte que deses Usar para este espacio?</option>
-                        <option value="mobiliario">Tienes alguna preferencia con la iluminacion?</option>
-                    </select>
+                    <label for="pregunta1">Que espacio estás interesado en diseñar?</label>
+                    <input type="text" id="pregunta1" placeholder="Respuesta">
+                    <label for="pregunta2">Cuál seía su función? Ej. relajante, trabajo, área social o entrenamiento</label>
+                    <input type="text" id="pregunta2" placeholder="Respuesta">
+                    <label for="pregunta3">Te gusta algún estilo en especifico? Ej, contemporaneo, clasico, minimalista...</label>
+                    <input type="text" id="pregunta3" placeholder="Respuesta">
+                    <label for="pregunta4">Que piezas de mobiliario desearías conservar?</label>
+                    <input type="text" id="pregunta4" placeholder="Respuesta">
                     <label for="mensaje">Cuéntanos sobre tu proyecto (Mensaje)</label>
                     <textarea placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
                     <button type="submit" class="btn-pill">Enviar Mensaje</button>
@@ -290,14 +283,14 @@
                     <input type="text" id="nombre" placeholder="Nombre" required>
                     <label for="correo">Correo electrónico</label>
                     <input type="email" id="correo" placeholder="Correo electrónico" required>
-                    <label for="servicio">Selecciona un servicio</label>
-                    <select required>
-                        <option value="" disabled selected>Selecciona un servicio</option>
-                        <option value="arquitectura">Que espacios estás interesado en diseñar</option>
-                        <option value="interiores">Cual sería su funcion? Ej, contemporaneo, clásico, minimailista...</option>
-                        <option value="mobiliario">Tienes preferencias/rechazo a ciertos colores (indicanos en ambos casos los colores por separados)</option>
-                        <option value="mobiliario">Tienes fotos del espacio en su estado actual?</option>
-                    </select>
+                    <label for="pregunta">Que espacios estás interesado en diseñar</label>
+                    <input type="text " placeholder="Respuesta">
+                    <label for="pregunta2">Cual sería su funcion? Ej, contemporaneo, clásico, minimailista...</label>
+                    <input type="text " placeholder="Respuesta">
+                    <label for="pregunta3">Tienes preferencias/rechazo a ciertos colores (indicanos en ambos casos los colores por separados)</label>
+                    <input type="text " placeholder="Respuesta">
+                    <label for="pregunta4">Tienes fotos del espacio en su estado actual?</label>
+                    <input type="text " placeholder="Respuesta">
                     <label for="mensaje">Cuéntanos sobre tu proyecto (Mensaje)</label>
                     <textarea id="mensaje" placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
                     <button type="submit" class="btn-pill">Agendar Cita</button>
