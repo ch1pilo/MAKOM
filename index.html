@@ -7,17 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/inicial negro.webp">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=WindSong:wght@400&family=Carattere&family=Mea+Culpa&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
     <title>Makom</title>
 </head>
 <body>
@@ -25,17 +18,39 @@
         <div class="logo">
             <img src="img/png/logotipo star white.png" alt="Makom Logo">
         </div>
+
+        <!-- Desktop nav — idéntico al original -->
         <nav>
             <ul>
                 <li><a href="#manifiesto">Manifesto</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#kavana">Kavanah</a></li>
-                <li><a href="#portafolio">Portfolio</a></li></li>
+                <li><a href="#portafolio">Portfolio</a></li>
                 <li><a href="#Cartografia">Cartografia</a></li>
                 <li><a href="#contactanos">Contáctanos</a></li>
             </ul>
         </nav>
+
+        <!-- Hamburger — solo visible en móvil -->
+        <button class="hamburger" id="menuBtn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <!-- Nav drawer móvil -->
+    <div class="nav-drawer" id="navDrawer">
+        <ul>
+            <li><a href="#manifiesto" class="nav-link">Manifesto</a></li>
+            <li><a href="#services"   class="nav-link">Servicios</a></li>
+            <li><a href="#kavana"     class="nav-link">Kavanah</a></li>
+            <li><a href="#portafolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#Cartografia"class="nav-link">Cartografia</a></li>
+            <li><a href="#contactanos"class="nav-link">Contáctanos</a></li>
+        </ul>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <main>
         <section class="baner">
@@ -76,10 +91,11 @@
                 </div>
             </div>
         </section>
+
         <section class="dist">
-            <div class="fila" id="">
+            <div class="fila" id="kavana">
                 <div class="left">
-                    <h3 id="Kavana" >Diseño con <br> KAVANAH</h3>
+                    <h3 id="Kavana">Diseño con <br> KAVANAH</h3>
                     <div class="line">
                         <hr>
                     </div>
@@ -105,6 +121,7 @@
                 </div>
             </div>
         </section>
+
         <section class="galery">
             <div class="fila">
                 <div class="left">
@@ -156,10 +173,10 @@
                 </div>
             </div>
         </section>
+
         <section class="mood-board">
             <div class="mood-container">
                 <div class="bg-shape"></div>
-                
                 <img src="img/png/2.png" class="mood-item plant" alt="Decoración">
                 <img src="img/16.webp" class="mood-item chair" alt="Silla de diseño">
                 <img src="img/—Pngtree—restaurant table_6794493.png" class="mood-item sofa" alt="Sofa">
@@ -167,13 +184,13 @@
                 <img src="img/png/13.png" class="mood-item retrato" alt="Mesa de madera">
                 <img src="img/png/15.png" class="mood-item lamp" alt="Lámpara">
                 <img src="img/png/1.png" class="mood-item coffee-table" alt="Mesita">
-                
                 <div class="mood-text">
                     <span>mood</span>
                     <p>board</p>
                 </div>
             </div>
         </section>
+
         <section class="niveles">
             <div class="fila">
                 <div class="dising">
@@ -194,8 +211,9 @@
                 </div>
             </div>
         </section>
+
         <section class="mood-board">
-            <div class="mood-container2">                
+            <div class="mood-container2">
                 <img src="img/22.webp" class="mood-item plant" alt="Decoración">
                 <img src="img/trazado.png" class="mood-item chair" alt="Silla de diseño">
                 <img src="img/trazado1.png" class="mood-item sillaLapiz" alt="Silla de diseño">
@@ -204,45 +222,38 @@
                 <img src="img/12.webp" class="mood-item coffee-table" alt="Mesita">
                 <img src="img/9.PNG" class="mood-item table" alt="Mesa de madera">
                 <img src="img/8.webp" class="mood-item lamp" alt="Lámpara">
-                
-                
             </div>
         </section>
+
         <section class="press" id="Cartografia">
             <h3>Cartografía</h3>
             <img src="img/cartografia.webp" alt="Mapa" class="map-img">
         </section>
+
         <section class="wellhall" id="contactanos">
             <h3>The Wellhall</h3>
             <div class="fila">
                 <div class="box">
                     <h4>Trabajemos juntos</h4>
                     <div class="inf">
-                        <p>
-                            Llena este formulario para concretar tu cita
-                        </p>
+                        <p>Llena este formulario para concretar tu cita</p>
                     </div>
-                  
                     <button id="open-info" class="btn-pill"> Más información </button>
                 </div>
-
                 <div class="box">
                     <h4>Cita de diseño</h4>
                     <p>En esta sesión de 30 minutos, analizamos tu visión bajo nuestra lente de <strong> Vanguardia internacional</strong> y proposito funcional </p>
                     <button id="open-cita" class="btn-pill"> Cita de diseño </button>
                 </div>
-
                 <div class="box">
                     <h4>Get Social</h4>
                     <div class="redes">
                         <a href="https://www.instagram.com/makomvzla?igsh=cWd1b2UxZ21uaHk1"><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""> <i class="fa-brands fa-facebook"></i></a>
-                        <a href=""> <i class="fa-regular fa-envelope"></i></a>
-                        </div>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-regular fa-envelope"></i></a>
+                    </div>
                     <a href="#" class="btn-pill"> Tag us in your photos! </a>
                 </div>
-
-                
             </div>
         </section>
 
@@ -257,7 +268,7 @@
                     <label for="correo">Correo electrónico</label>
                     <input type="email" id="correo" placeholder="Tu Correo electrónico" required>
                     <label for="presupuesto">Presupuesto del proyecto (opcional)</label>
-                    <input type="text" id="presupuesto" placeholder="500$ de presupuesto aproximado para el proyecto?" >
+                    <input type="text" id="presupuesto" placeholder="500$ de presupuesto aproximado para el proyecto?">
                     <label for="pregunta1">Que espacio estás interesado en diseñar?</label>
                     <input type="text" id="pregunta1" placeholder="Respuesta">
                     <label for="pregunta2">Cuál seía su función? Ej. relajante, trabajo, área social o entrenamiento</label>
@@ -279,32 +290,81 @@
                 <span class="close-btn" data-modal="modal-cita">&times;</span>
                 <h3>Cita de diseño</h3>
                 <form class="modal-form">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Nombre" required>
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" placeholder="Correo electrónico" required>
+                    <label for="nombre2">Nombre</label>
+                    <input type="text" id="nombre2" placeholder="Nombre" required>
+                    <label for="correo2">Correo electrónico</label>
+                    <input type="email" id="correo2" placeholder="Correo electrónico" required>
                     <label for="pregunta">Que espacios estás interesado en diseñar</label>
-                    <input type="text " placeholder="Respuesta">
-                    <label for="pregunta2">Cual sería su funcion? Ej, contemporaneo, clásico, minimailista...</label>
-                    <input type="text " placeholder="Respuesta">
-                    <label for="pregunta3">Tienes preferencias/rechazo a ciertos colores (indicanos en ambos casos los colores por separados)</label>
-                    <input type="text " placeholder="Respuesta">
-                    <label for="pregunta4">Tienes fotos del espacio en su estado actual?</label>
-                    <input type="text " placeholder="Respuesta">
-                    <label for="mensaje">Cuéntanos sobre tu proyecto (Mensaje)</label>
-                    <textarea id="mensaje" placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
+                    <input type="text" placeholder="Respuesta">
+                    <label for="pregunta2b">Cual sería su funcion? Ej, contemporaneo, clásico, minimailista...</label>
+                    <input type="text" placeholder="Respuesta">
+                    <label for="pregunta3b">Tienes preferencias/rechazo a ciertos colores (indicanos en ambos casos los colores por separados)</label>
+                    <input type="text" placeholder="Respuesta">
+                    <label for="pregunta4b">Tienes fotos del espacio en su estado actual?</label>
+                    <input type="text" placeholder="Respuesta">
+                    <label for="mensaje2">Cuéntanos sobre tu proyecto (Mensaje)</label>
+                    <textarea id="mensaje2" placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
                     <button type="submit" class="btn-pill">Agendar Cita</button>
                 </form>
             </div>
         </div>
     </main>
+
     <footer>
         <p>Copyright © 2026 Makom. All rights reserved.</p>
-        <div class="redes">
-            
-        </div>
+        <div class="redes"></div>
         <a href="">Creado por Ing. Sulbaran Angel</a>
     </footer>
+
     <script src="script.js"></script>
+    <script>
+        /* ── Hamburger / Nav Drawer ── */
+        const menuBtn    = document.getElementById('menuBtn');
+        const navDrawer  = document.getElementById('navDrawer');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function openMenu() {
+            menuBtn.classList.add('open');
+            navDrawer.classList.add('open');
+            navOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            menuBtn.classList.remove('open');
+            navDrawer.classList.remove('open');
+            navOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', () =>
+            navDrawer.classList.contains('open') ? closeMenu() : openMenu()
+        );
+        navOverlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', closeMenu));
+
+        /* ── Modals ── */
+        function openModal(id) {
+            const m = document.getElementById(id);
+            m.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            const m = document.getElementById(id);
+            m.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('open-info').addEventListener('click', () => openModal('modal-info'));
+        document.getElementById('open-cita').addEventListener('click', () => openModal('modal-cita'));
+
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', () => closeModal(btn.dataset.modal));
+        });
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', e => {
+                if (e.target === modal) closeModal(modal.id);
+            });
+        });
+    </script>
 </body>
 </html>
