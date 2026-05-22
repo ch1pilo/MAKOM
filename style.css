@@ -851,7 +851,8 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     /* Planificación espacial — segunda .fila */
     .galery .fila:last-of-type {
         padding: 40px 415x;
-        gap: 15px;
+        gap: 30px;
+        flex-direction: column;
     }
 
     .galery .fila .left.plano {
@@ -866,7 +867,7 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     }
 
     .galery .fila .rigth2 {
-        width: 100%;
+        width: 80%;
         gap: 20px;
         font-size: 8px;
     }
@@ -1004,9 +1005,8 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     /* ── Cartografía ── */
     .press { padding: 50px 24px; }
     #Cartografia h3 {
-        position: static;
         font-size: 42px;
-        margin-bottom: 20px;
+        top: 9%;
     }
 
     /* ── Wellhall / Contacto ── */
