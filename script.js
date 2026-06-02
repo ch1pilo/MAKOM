@@ -1,40 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Lista de imágenes disponibles en tu carpeta img
-    // Puedes agregar o quitar nombres de archivos según lo que tengas en tu carpeta
-    const misImagenes = [
-        "img/46.webp",
-        "img/44.webp",
-        "img/45.webp",
-        "img/47.webp",
-        "img/48.webp",
-        "img/41.webp",
-        "img/34.webp",
-        "img/35.webp",
-        "img/23.webp",
-        "img/25.webp"
-    ];
+    // Listas de imágenes personalizadas por colaborador
+    const imagenesColabA = ["img/46.webp", "img/44.webp", "img/45.webp", "img/3.webp"];
+    const imagenesColabB = ["img/47.webp", "img/48.webp", "img/41.webp", "img/5.webp"];
+    const imagenesColabC = ["img/34.webp", "img/35.webp", "img/23.webp", "img/19.webp"];
 
     /**
      * Función para rotar imágenes con efecto de parpadeo
      * @param {string} selector - El selector CSS de la imagen
      * @param {number} intervalo - Tiempo en segundos (3, 4 o 5)
+     * @param {string[]} lista - Array de imágenes para este contenedor
      */
-    function iniciarEfectoGaleria(selector, intervalo) {
+    function iniciarEfectoGaleria(selector, intervalo, lista) {
         const img = document.querySelector(selector);
         
-        if (!img) return;
+        if (!img || !lista || lista.length === 0) return;
 
-        // Aplicamos la clase de animación CSS (animate-3s, etc.)
         img.classList.add(`animate-${intervalo}s`);
 
         setInterval(() => {
-            // Buscamos una imagen aleatoria que sea diferente a la actual
             let nuevaImg;
             do {
-                nuevaImg = misImagenes[Math.floor(Math.random() * misImagenes.length)];
+                nuevaImg = lista[Math.floor(Math.random() * lista.length)];
             } while (nuevaImg === img.getAttribute('src'));
 
-            // Cambiamos el src a mitad del intervalo (cuando el CSS pone opacity: 0)
             setTimeout(() => {
                 img.src = nuevaImg;
             }, (intervalo * 1000) / 2);
@@ -42,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, intervalo * 1000);
     }
 
-    // 2. Ejecutamos la función para las 3 imágenes de la galería
-    iniciarEfectoGaleria('.galery .grande img', 10); // La imagen grande cambia cada 10s
-    iniciarEfectoGaleria('.galery .right > img:nth-of-type(1)', 8); // La primera chica cada 8s
-    iniciarEfectoGaleria('.galery .right > img:nth-of-type(2)', 12); // La segunda chica cada 12s
+    // Ejecutamos la rotación con sus respectivas listas
+    iniciarEfectoGaleria('.galery .grande img', 10, imagenesColabA);
+    iniciarEfectoGaleria('.colab-wrapper:nth-of-type(2) .foto-chica', 8, imagenesColabB);
+    iniciarEfectoGaleria('.colab-wrapper:nth-of-type(3) .foto-chica', 12, imagenesColabC);
 
     // --- Lógica de Modales ---
     const modalInfo = document.getElementById('modal-info');
