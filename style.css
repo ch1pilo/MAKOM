@@ -725,7 +725,9 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     /* ── Banner ── */
     .baner { height: 80vh; max-height: 580px; }
 
-    .description h1 { font-size: clamp(70px, 18vw, 100px); }
+    .description img { 
+        width: 70%;
+     }
     .description p  { font-size: 12px; letter-spacing: 3px; }
 
     /* ── Manifiesto ── */
@@ -796,7 +798,7 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     #port   { font-size: 20px !important; }
 
     .dist .fila .left p,
-    .dist .fila-reverse .right p { font-size: 8px; line-height: 1.7; }
+    .dist .fila-reverse .right p { font-size: 8px; line-height: 1.1; }
     .dist .fila .left a, .dist .fila-reverse .right a{
         font-size: 10px;
     }
@@ -842,6 +844,15 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     .galery .fila .right span {
         font-size: 3px;
     }
+
+    .colab-v-top { top: 5px; right: -8px; writing-mode: vertical-lr; }
+
+    /* Segunda: Parte inferior, pegado derecha, lectura izq-der */
+    .colab-h-bottom { bottom: -5px; right: 3px; }
+
+    /* Tercera: Lado izquierdo, pegado abajo, lectura abajo-arriba */
+    .colab-v-bottom { bottom: 5px; left: -8px; writing-mode: vertical-lr; transform: rotate(180deg); }
+
 
     .galery .fila .rigth2 {
         width: 80%;
