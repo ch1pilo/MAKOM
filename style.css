@@ -299,7 +299,7 @@ li a { color: var(--white-defecto); }
 
 .colab-name {
     position: absolute;
-    font-family: var(--font-subVariable);
+    font-family: var(--font-subtitulos);
     font-size: 11px;
     letter-spacing: 1px;
     color: var(--marron);
@@ -309,13 +309,13 @@ li a { color: var(--white-defecto); }
 }
 
 /* Grande: Lado derecho, pegado arriba, lectura arriba-abajo */
-.colab-v-top { top: 15px; right: -15px; writing-mode: vertical-lr; }
+.colab-v-top { top: 15px; right: -18px; writing-mode: vertical-lr; }
 
 /* Segunda: Parte inferior, pegado derecha, lectura izq-der */
-.colab-h-bottom { bottom: -15px; right: 15px; }
+.colab-h-bottom { bottom: -15px; right: 18px; }
 
 /* Tercera: Lado izquierdo, pegado abajo, lectura abajo-arriba */
-.colab-v-bottom { bottom: 15px; left: -15px; writing-mode: vertical-lr; transform: rotate(180deg); }
+.colab-v-bottom { bottom: 15px; left: -18px; writing-mode: vertical-lr; transform: rotate(180deg); }
 
 .grande img,
 .foto-chica {
@@ -380,80 +380,26 @@ li a { color: var(--white-defecto); }
    ============================================================ */
 .mood-board {
     background-color: var(--oat);
-    padding: 100px 0;
+    padding: 60px 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .plano { padding: 50px !important; }
 
 .mood-container,
 .mood-container2 {
-    position: relative;
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
-    height: 600px;
-    left: -3%;
-    top: -2%;
 }
 
-.bg-shape {
-    position: absolute;
-    background-color: #afac9480;
-    width: 50%;
-    height: 60%;
-    top: 20%;
-    right: 10%;
-    z-index: 1;
-}
-
-.mood-item {
-    position: absolute;
-    z-index: 2;
-    transition: transform 0.3s ease;
-}
-
-.mood-item:hover { transform: scale(1.05); z-index: 10; }
-
-/* mood-container 1 positioning */
-.table           { width: 34%; top: 15%; right: 1%; z-index: 2; }
-.mood-container .plant        { width: 40%; bottom: 40%; z-index: 1; left: 4%; }
-.mood-container .coffee-table { width: 28%; top: 50%; left: 44%; }
-.mood-container .lamp         { width: 9%; bottom: 83%; right: 1%; z-index: 2; }
-.mood-container .sofa         { width: 42%; bottom: 1%; z-index: 2; }
-.mood-container .chair        { width: 18%; height: 90px; bottom: 90%; left: 36%; z-index: 3; }
-.mood-container .retrato      { width: 30%; bottom: 50%; right: 18%; z-index: 3; }
-
-/* mood-container 2 positioning */
-.mood-container2 .plant       { width: 20%; top: 30%; left: 85%; }
-.mood-container2 .sillaLapiz  { width: 25%; left: 40%; z-index: 3; }
-.mood-container2 .chair       { width: 40%; top: 5%; left: 20%; }
-.mood-container2 .sofa        { width: 45%; top: 45%; left: 25%; }
-.mood-container2 .table       { width: 15%; top: 50%; right: 90%; }
-.mood-container2 .lamp        { width: 20%; top: 10%; height: 35%; left: 75%; }
-.mood-container2 .coffee-table{ width: 22%; }
-.mood-container2 .sillaInverso{ left: 50%; top: 50%; width: 20%; }
-
-/* Mood text */
-.mood-text {
-    position: absolute;
-    top: 83%;
-    right: 10%;
-    text-align: right;
-    font-family: serif;
-    z-index: 5;
-}
-
-.mood-text span { font-size: 30px; color: var(--marron); }
-
-.mood-text p {
-    font-family: 'boungiorno-rastellino', serif;
-    font-size: 180px;
-    font-style: italic;
-    color: #5c3d2e;
-    margin-top: -70px;
-    margin-right: -120px;
+.mood-container img,
+.mood-container2 img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ============================================================
@@ -893,6 +839,10 @@ footer a { color: var(--olive-branch); text-decoration: none; }
         object-fit: cover;
     }
 
+    .galery .fila .right span {
+        font-size: 3px;
+    }
+
     .galery .fila .rigth2 {
         width: 80%;
         gap: 20px;
@@ -909,111 +859,9 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     /* ── Mood Board — mobile: grid limpio ── */
     /* Ocultamos el collage absoluto en móvil y mostramos un grid */
    .mood-board{
-    height: 310px;
+    padding: 30px 0;
+    height: auto;
    }
-        
-    .bg-shape{
-        top: -6%;
-        height: 20%;
-    }
-    .table{ 
-        width: 34%; 
-        top: -6%; 
-        right: 1%; 
-        z-index: 2; 
-    }
-    .mood-container .plant {
-        width: 30%;
-        top: -12%;
-        z-index: 1;
-        left: 4%;
-    }
-    
-    .mood-text{
-        top: 20%;
-    }
-
-    .mood-text p{
-        font-size: 100px;
-        margin-top: -50px;
-        margin-right: -40px;
-    }
-    .mood-container .coffee-table { width: 28%; top: 8%; left: 38%; }
-
-    .mood-container .lamp{ 
-        width: 9%; 
-        TOP: -10%;
-        right: 1%; 
-        z-index: 2; 
-    }
-    
-    .mood-container .sofa{
-        width: 42%; 
-        top: 4%; 
-        z-index: 2; 
-    }
-    .mood-container .chair {
-        width: 20%;
-        height: 7%;
-        top: -12%;
-        left: 33%;
-        z-index: 3;
-    }   
-    .mood-container .retrato {
-        width: 30%;
-        top: -12%;
-        right: 20%;
-        z-index: 3;
-    }
-    /* mood-container 2 positioning */
-    .mood-container2 .plant {
-        width: 20%;
-        top: -2%;
-        left: 78%;
-    }
-    
-    .mood-container2 .sillaLapiz {
-        width: 25%;
-        left: 40%;
-        top: -14%;
-        z-index: 3;
-    }
-    
-    .mood-container2 .chair {
-        width: 40%;
-        top: -12%;
-        left: 20%;
-    }
-
-    .mood-container2 .sofa {
-        width: 45%;
-        top: 11%;
-        left: 17%;
-    }
-    
-    .mood-container2 .table {
-        width: 15%;
-        top: 1%;
-        left: 1%;
-    }
-    .mood-container2 .lamp {
-        width: 20%;
-        top: -10%;
-        height: 15%;
-        left: 64%;
-    }
-    
-    .mood-container2 .coffee-table {
-        width: 22%;
-        bottom: 95%;
-        left: 7%;
-    }
-    
-    .mood-container2 .sillaInverso {
-        left: 40%;
-        top: 10%;
-        width: 25%;
-    }
 
 
     /* ── Niveles ── */
