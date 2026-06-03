@@ -852,14 +852,14 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     .galery .fila .right{
         gap: 10px;
     }
-    
-    .colab-v-top { top: 5px; right: -5px; writing-mode: vertical-lr; }
+
+    .colab-v-top { top: 0; right: -5px; writing-mode: vertical-lr; }
 
     /* Segunda: Parte inferior, pegado derecha, lectura izq-der */
-    .colab-h-bottom { bottom: -5px; right: 3px; }
+    .colab-h-bottom { bottom: -5px; right: 0; }
 
     /* Tercera: Lado izquierdo, pegado abajo, lectura abajo-arriba */
-    .colab-v-bottom { bottom: 5px; left: -5px; writing-mode: vertical-lr; transform: rotate(180deg); }
+    .colab-v-bottom { bottom: 0; left: -5px; writing-mode: vertical-lr; transform: rotate(180deg); }
 
 
     .galery .fila .rigth2 {
