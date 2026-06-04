@@ -656,6 +656,7 @@ footer a { color: var(--olive-branch); text-decoration: none; }
     .manifiesto p { width: 90%; }
     .fila .left, .fila-reverse .right { padding: 0 50px; }
     .description h1 { font-size: 100px; }
+    .press .line hr { display: none; }
 }
 
 /* ============================================================
@@ -808,15 +809,17 @@ footer a { color: var(--olive-branch); text-decoration: none; }
         margin: 0;
     }
 
-    .left .line hr,
-    .line-reverse hr { height: 50px; }
-    .line-reverse hr { margin-left: 100%; }
+    .left .line hr{ height: 50px; }
+    .line-reverse hr { 
+        margin-left: 100%;
+        height: 10px;
+    }
 
     #Kavana { font-size: 20px !important; line-height: 1.2; }
     #port   { font-size: 20px !important; }
 
     .dist .fila .left p,
-    .dist .fila-reverse .right p { font-size: 8px; line-height: 1.1; }
+    .dist .fila-reverse .right p { font-size: 7px; line-height: 1.1; }
     .dist .fila .left a, .dist .fila-reverse .right a{
         font-size: 10px;
     }
