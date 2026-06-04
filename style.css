@@ -303,11 +303,9 @@ li a { color: var(--white-defecto); }
 
 .colab-name {
     position: absolute;
-    font-family: var(--font-subtitulos);
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: var(--marron);
-    text-transform: uppercase;
     white-space: nowrap;
     pointer-events: none;
 }
