@@ -243,6 +243,10 @@ li a { color: var(--white-defecto); }
     background-color: var(--marron);
 }
 
+.line-reverse hr { 
+    height: 100px; 
+}
+
 .right img,
 .fila-reverse .left img {
     width: 100%;
@@ -447,6 +451,17 @@ li a { color: var(--white-defecto); }
     position: relative;
 }
 
+.press .line hr {
+    border: none;
+    width: 2px;
+    height: 90px;
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    height: 50px;
+    background-color: var(--olive-branch);
+}
+
 .map-img { width: 100%; margin-top: 10px; }
 
 #Cartografia h3 {
@@ -526,6 +541,9 @@ li a { color: var(--white-defecto); }
     align-self: flex-start;
 }
 
+.n{
+    font-weight: bold;
+}
 /* ============================================================
    REDES
    ============================================================ */

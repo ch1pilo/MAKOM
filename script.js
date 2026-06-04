@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Listas de imágenes personalizadas por colaborador
-    const imagenesColabA = ["img/46.webp", "img/44.webp", "img/45.webp", "img/3.webp"];
-    const imagenesColabB = ["img/47.webp", "img/48.webp", "img/41.webp", "img/5.webp"];
-    const imagenesColabC = ["img/34.webp", "img/35.webp", "img/23.webp", "img/19.webp"];
+    const imagenesColabA = ["img/colaboradores/Alma/1.webp", "img/colaboradores/Alma/2.webp", "img/colaboradores/Alma/3.webp", "img/colaboradores/Alma/4.webp", "img/colaboradores/Alma/5.webp", "img/colaboradores/Alma/6.webp", "img/colaboradores/Alma/7.webp"];
+    const imagenesColabB = ["img/colaboradores/Shechter/1.webp", "img/colaboradores/Shechter/2.webp", "img/colaboradores/Shechter/3.webp", "img/colaboradores/Shechter/4.webp"];
+    const imagenesColabC = ["img/colaboradores/uhr interiores/1.webp", "img/colaboradores/uhr interiores/2.webp", "img/colaboradores/uhr interiores/3.webp", "img/colaboradores/uhr interiores/4.webp", "img/colaboradores/uhr interiores/5.webp"];
 
     /**
      * Función para rotar imágenes con efecto de parpadeo
