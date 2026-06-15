@@ -59,4 +59,34 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target === modalInfo) modalInfo.style.display = "none";
         if (event.target === modalCita) modalCita.style.display = "none";
     };
+
+    // --- Lógica de Envío de Formularios a Labmakom@gmail.com ---
+    const forms = document.querySelectorAll('.modal-form');
+    forms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch("https://formsubmit.co/ajax/Labmakom@gmail.com", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert("¡Gracias! Tu mensaje ha sido enviado con éxito a Labmakom.");
+                    form.reset();
+                    const modal = form.closest('.modal');
+                    if (modal) modal.style.display = "none";
+                    document.body.style.overflow = '';
+                } else {
+                    alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
+                }
+            } catch (error) {
+                alert("Error de conexión. Revisa tu internet e intenta nuevamente.");
+            }
+        });
+    });
 });

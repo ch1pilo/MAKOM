@@ -256,23 +256,23 @@
             <div class="modal-content">
                 <span class="close-btn" data-modal="modal-info">&times;</span>
                 <h3>Trabajemos juntos</h3>
-                <form class="modal-form">
+                <form class="modal-form" id="form-info">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Tu Nombre" required>
+                    <input type="text" id="nombre" name="name" placeholder="Tu Nombre" required>
                     <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" placeholder="Tu Correo electrónico" required>
+                    <input type="email" id="correo" name="email" placeholder="Tu Correo electrónico" required>
                     <label for="presupuesto">Presupuesto del proyecto (opcional)</label>
-                    <input type="text" id="presupuesto" placeholder="500$ de presupuesto aproximado para el proyecto?">
+                    <input type="text" id="presupuesto" name="presupuesto" placeholder="500$ de presupuesto aproximado para el proyecto?">
                     <label for="pregunta1">Que espacio estás interesado en diseñar?</label>
-                    <input type="text" id="pregunta1" placeholder="Respuesta">
+                    <input type="text" id="pregunta1" name="espacio_a_disenar" placeholder="Respuesta">
                     <label for="pregunta2">Cuál seía su función? Ej. relajante, trabajo, área social o entrenamiento</label>
-                    <input type="text" id="pregunta2" placeholder="Respuesta">
+                    <input type="text" id="pregunta2" name="funcion_del_espacio" placeholder="Respuesta">
                     <label for="pregunta3">Te gusta algún estilo en especifico? Ej, contemporaneo, clasico, minimalista...</label>
-                    <input type="text" id="pregunta3" placeholder="Respuesta">
+                    <input type="text" id="pregunta3" name="estilo_preferido" placeholder="Respuesta">
                     <label for="pregunta4">Que piezas de mobiliario desearías conservar?</label>
-                    <input type="text" id="pregunta4" placeholder="Respuesta">
+                    <input type="text" id="pregunta4" name="mobiliario_a_conservar" placeholder="Respuesta">
                     <label for="mensaje">Cuéntanos sobre tu proyecto (Mensaje)</label>
-                    <textarea placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
+                    <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
                     <button type="submit" class="btn-pill">Enviar Mensaje</button>
                 </form>
             </div>
@@ -283,21 +283,21 @@
             <div class="modal-content">
                 <span class="close-btn" data-modal="modal-cita">&times;</span>
                 <h3>Cita de diseño</h3>
-                <form class="modal-form">
+                <form class="modal-form" id="form-cita">
                     <label for="nombre2">Nombre</label>
-                    <input type="text" id="nombre2" placeholder="Nombre" required>
+                    <input type="text" id="nombre2" name="name" placeholder="Nombre" required>
                     <label for="correo2">Correo electrónico</label>
-                    <input type="email" id="correo2" placeholder="Correo electrónico" required>
+                    <input type="email" id="correo2" name="email" placeholder="Correo electrónico" required>
                     <label for="pregunta">Que espacios estás interesado en diseñar</label>
-                    <input type="text" placeholder="Respuesta">
+                    <input type="text" name="espacios_interes" placeholder="Respuesta">
                     <label for="pregunta2b">Cual sería su funcion? Ej, contemporaneo, clásico, minimailista...</label>
-                    <input type="text" placeholder="Respuesta">
+                    <input type="text" name="estilo_funcion" placeholder="Respuesta">
                     <label for="pregunta3b">Tienes preferencias/rechazo a ciertos colores (indicanos en ambos casos los colores por separados)</label>
-                    <input type="text" placeholder="Respuesta">
+                    <input type="text" name="preferencias_colores" placeholder="Respuesta">
                     <label for="pregunta4b">Tienes fotos del espacio en su estado actual?</label>
-                    <input type="text" placeholder="Respuesta">
+                    <input type="text" name="fotos_actuales" placeholder="Respuesta">
                     <label for="mensaje2">Cuéntanos sobre tu proyecto (Mensaje)</label>
-                    <textarea id="mensaje2" placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
+                    <textarea id="mensaje2" name="mensaje" placeholder="Cuéntanos sobre tu proyecto (Mensaje)" required></textarea>
                     <button type="submit" class="btn-pill">Agendar Cita</button>
                 </form>
             </div>
