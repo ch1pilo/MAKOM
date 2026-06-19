@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch("https://formsubmit.co/ajax/Labmakom@gmail.com", {
+                const response = await fetch("https://formsubmit.co/ajax/Info@makomlab.com", {
                     method: "POST",
                     headers: { "Content-Type": "application/json", "Accept": "application/json" },
                     body: JSON.stringify(data)
